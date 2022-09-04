@@ -47,7 +47,7 @@ class _ordersState extends State<orders> {
                           color: Colors.white
                       ),
                       child: Padding(padding: EdgeInsets.only(bottom: 5),
-                        child: Text("طلبات سابقة",style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', color: isOldOrder ? Colors.black : Colors.grey),),
+                        child: Text("طلبات سابقة",style: TextStyle(fontFamily: 'readex', color: isOldOrder ? Colors.black : Colors.grey),),
                       ),
                     ),
                   ),
@@ -62,7 +62,7 @@ class _ordersState extends State<orders> {
                         border: isOldOrder ? Border(bottom: BorderSide.none) : Border(bottom: BorderSide(width: 1, color: Color(mainColor))),
                       ),
                       child: Padding(padding: EdgeInsets.only(bottom: 5),
-                        child: Text("الطلبات القادمة",style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', color: isOldOrder ? Colors.grey : Colors.black),),
+                        child: Text("الطلبات القادمة",style: TextStyle(fontFamily: 'readex', color: isOldOrder ? Colors.grey : Colors.black),),
                       ),
                     ),
                   ),
@@ -71,7 +71,7 @@ class _ordersState extends State<orders> {
             ),
 
             Container(
-              height: MediaQuery.of(context).size.height-191,
+              height: MediaQuery.of(context).size.height-190,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

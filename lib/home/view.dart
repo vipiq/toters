@@ -450,6 +450,7 @@ class _homeState extends State<home> {
                       ],
                     ),
                   ),
+                  SizedBox(width: 8,),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
                     decoration: BoxDecoration(
@@ -464,7 +465,7 @@ class _homeState extends State<home> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 15,),
+                  SizedBox(width: 8,),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
@@ -475,7 +476,7 @@ class _homeState extends State<home> {
                       children: [
                         Text("4.9", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', fontSize: 10),),
                         SizedBox(width: 5,),
-                        Icon(Icons.star, color: Color(mainColor),)
+                        Icon(Icons.star, color: Color(mainColor), size: 18,)
                       ],
                     ),
                   )

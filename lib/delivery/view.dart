@@ -40,7 +40,7 @@ class _deliveryState extends State<delivery> {
                     padding: EdgeInsets.only(bottom: 30, right: 15),
                     width: MediaQuery.of(context).size.width,
                     color: Color(mainColor),
-                    child: Text("نوصل اي شئ يسع على متن دراجة نارية!", style: TextStyle(fontSize: 18, fontFamily: 'readex', fontWeight: FontWeight.bold, color: Colors.white),),
+                    child: Text("نوصل اي شئ يسع على متن دراجة نارية!", style: TextStyle(fontSize: 18, fontFamily: 'readex', color: Colors.white),),
                   ),
 
                   Padding(padding: EdgeInsets.symmetric(horizontal: 15, vertical: 30),
@@ -48,15 +48,15 @@ class _deliveryState extends State<delivery> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(padding: EdgeInsets.symmetric(vertical: 10),
-                          child: Text("اطلب مندوب ل:", style: TextStyle(fontSize: 18, fontFamily: 'readex'),),
+                          child: Text("اطلب مندوب ل:", style: TextStyle(fontSize: 15, fontFamily: 'readex'),),
                         ),
                         Container(
                           padding: EdgeInsets.all(15),
                           margin: EdgeInsets.symmetric(vertical: 10),
                           decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
+                            color: Colors.grey.withOpacity(0.09),
                             borderRadius: BorderRadius.circular(5),
-                            border: Border.all(width: 0.5, color: Colors.grey.withOpacity(0.5))
+                            border: Border.all(width: 0.5, color: Colors.grey.withOpacity(0.3))
                           ),
 
                           child: Row(
@@ -68,7 +68,7 @@ class _deliveryState extends State<delivery> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("توصيل احتياجاتك", style: TextStyle(fontSize: 16, fontFamily: 'readex', fontWeight: FontWeight.w300, color: Color(mainColor)),),
+                                    Text("توصيل احتياجاتك", style: TextStyle(fontSize: 15, fontFamily: 'readex', color: Color(mainColor)),),
                                     Padding(padding: EdgeInsets.only(top: 5),
                                       child: Text("مثلاً نسيت مفتاحك بالبيت، وتريد احد يوصله لك للمكتب", style: TextStyle(fontSize: 12, fontFamily: 'readex', color: Colors.black45),),
                                     )
@@ -76,7 +76,7 @@ class _deliveryState extends State<delivery> {
                                 ),
                               ),
                               Image.asset("images/vector.png", width: 100,),
-                              Icon(Icons.arrow_forward_ios, size: 18, color: Color(mainColor),)
+                              Icon(Icons.arrow_forward_ios, size: 13, color: Color(mainColor),)
                             ],
                           ),
                         ),
@@ -84,9 +84,9 @@ class _deliveryState extends State<delivery> {
                           padding: EdgeInsets.all(15),
                           margin: EdgeInsets.symmetric(vertical: 10),
                           decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
+                            color: Colors.grey.withOpacity(0.09),
                             borderRadius: BorderRadius.circular(5),
-                            border: Border.all(width: 0.5, color: Colors.grey.withOpacity(0.5))
+                            border: Border.all(width: 0.5, color: Colors.grey.withOpacity(0.3))
                           ),
 
                           child: Row(
@@ -98,7 +98,7 @@ class _deliveryState extends State<delivery> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("شراء احتياجاتك", style: TextStyle(fontSize: 16, fontFamily: 'readex', fontWeight: FontWeight.w300, color: Color(mainColor)),),
+                                    Text("شراء احتياجاتك", style: TextStyle(fontSize: 15, fontFamily: 'readex', color: Color(mainColor)),),
                                     Padding(padding: EdgeInsets.only(top: 5),
                                       child: Text("ما لقيت اللي تريده بتطبيقنا ؟ مندوب توترز يقدر يشتري لك اللي تحتاجه من اي مكان تختاره", style: TextStyle(fontSize: 12, fontFamily: 'readex', color: Colors.black45),),
                                     )
@@ -106,7 +106,7 @@ class _deliveryState extends State<delivery> {
                                 ),
                               ),
                               Image.asset("images/vector.png", width: 100,),
-                              Icon(Icons.arrow_forward_ios, size: 18, color: Color(mainColor),)
+                              Icon(Icons.arrow_forward_ios, size: 13, color: Color(mainColor),)
                             ],
                           ),
                         ),

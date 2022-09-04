@@ -24,23 +24,23 @@ class _profileState extends State<profile> {
 
           children: [
             Container(
-              height: 100,
+              height: 92,
               padding: EdgeInsets.only(bottom: 10),
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.bottomCenter,
-              child:Text("Ibrahim ali", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+              child:Text("Ibrahim ali", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
             ),
 
             Container(
-              height: MediaQuery.of(context).size.height-191,
+              height: MediaQuery.of(context).size.height-182,
               color: Colors.grey.withOpacity(0.05),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
                   Container(
-                    width: 200,
-                    padding: EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width-300,
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                     margin: EdgeInsets.symmetric(vertical: 15),
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -53,22 +53,22 @@ class _profileState extends State<profile> {
                     ),
                     child: Row(
                       children: [
-                        Icon(Icons.card_giftcard_outlined, color: Color(mainColor), size: 35,),
+                        Icon(Icons.card_giftcard_outlined, color: Color(mainColor), size: 30,),
                         Padding(padding: EdgeInsets.only(right: 10, left: 25),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("الفئة الخضراء", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex'),),
-                              Text("0 نقطة", style: TextStyle(color: Colors.grey, fontFamily: 'readex'),),
+                              Text("الفئة الخضراء", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', fontSize: 12),),
+                              Text("0 نقطة", style: TextStyle(color: Colors.grey, fontFamily: 'readex', fontSize: 12),),
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, color: Color(mainColor), size: 20,)
+                        Icon(Icons.arrow_forward_ios, color: Color(mainColor), size: 15,)
                       ],
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                     margin: EdgeInsets.only(bottom: 15),
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -80,62 +80,62 @@ class _profileState extends State<profile> {
                         )]
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(15),
+                              padding: EdgeInsets.all(10),
                               margin: EdgeInsets.only(bottom: 10),
                               decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.09),
+                                  color: Colors.grey.withOpacity(0.06),
                                   borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Icon(Icons.person_outline, size: 30, color: Colors.black54,),
+                              child: Icon(Icons.person_outline, size: 25, color: Colors.black.withOpacity(0.4),),
                             ),
-                            Text("الملف الشخصي", style: TextStyle(fontFamily: 'readex', fontSize: 12),)
+                            Text("الملف الشخصي", style: TextStyle(fontFamily: 'readex', fontSize: 10),)
                           ],
                         ),
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(15),
+                              padding: EdgeInsets.all(10),
                               margin: EdgeInsets.only(bottom: 10),
                               decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.09),
+                                  color: Colors.grey.withOpacity(0.06),
                                   borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Icon(Icons.support_agent_outlined, size: 30, color: Colors.black54,),
+                              child: Icon(Icons.support_agent_outlined, size: 25, color: Colors.black.withOpacity(0.4),),
                             ),
-                            Text("مركز المساعدة", style: TextStyle(fontFamily: 'readex', fontSize: 12),)
+                            Text("مركز المساعدة", style: TextStyle(fontFamily: 'readex', fontSize: 10),)
                           ],
                         ),
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(15),
+                              padding: EdgeInsets.all(10),
                               margin: EdgeInsets.only(bottom: 10),
                               decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.09),
+                                  color: Colors.grey.withOpacity(0.06),
                                   borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Icon(Icons.payment_outlined, size: 30, color: Colors.black54,),
+                              child: Icon(Icons.payment_outlined, size: 25, color: Colors.black.withOpacity(0.4),),
                             ),
-                            Text("طرق الدفع", style: TextStyle(fontFamily: 'readex', fontSize: 12),)
+                            Text("طرق الدفع", style: TextStyle(fontFamily: 'readex', fontSize: 10),)
                           ],
                         ),
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(15),
+                              padding: EdgeInsets.all(10),
                               margin: EdgeInsets.only(bottom: 10),
                               decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.09),
+                                  color: Colors.grey.withOpacity(0.06),
                                   borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Icon(Icons.language, size: 30, color: Colors.black54,),
+                              child: Icon(Icons.language, size: 25, color: Colors.black54,),
                             ),
-                            Text("اللغة", style: TextStyle(fontFamily: 'readex', fontSize: 12),)
+                            Text("اللغة", style: TextStyle(fontFamily: 'readex', fontSize: 10),)
                           ],
                         ),
                       ],
@@ -157,9 +157,9 @@ class _profileState extends State<profile> {
                       children: [
                         Row(
                           children: [
-                            Text("الرصيد النقدي لدى توترز", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold),),
+                            Text("الرصيد النقدي لدى توترز", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold, fontSize: 12),),
                             SizedBox(width: 6,),
-                            Icon(Icons.info_outline, color: Color(mainColor), size: 30,)
+                            Icon(Icons.info_outline, color: Color(mainColor), size: 20,)
                           ],
                         ),
                         item('المحفضة', Icons.wallet, true, '٠ د.ع.'),
@@ -184,9 +184,9 @@ class _profileState extends State<profile> {
                       children: [
                         Row(
                           children: [
-                            Text("عروض خاصة", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold),),
+                            Text("عروض خاصة", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold, fontSize: 12),),
                             SizedBox(width: 6,),
-                            Icon(Icons.info_outline, color: Color(mainColor), size: 30,)
+                            Icon(Icons.info_outline, color: Color(mainColor), size: 20,)
                           ],
                         ),
                         item('رصيد', Icons.percent_outlined, true, '٠ د.ع.'),
@@ -209,7 +209,7 @@ class _profileState extends State<profile> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("تفاصيل الحساب", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold),),
+                        Text("تفاصيل الحساب", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold, fontSize: 12),),
                         item('الاشعارات', Icons.notifications_none_outlined, true, ''),
                         item('العناوين', Icons.location_on_outlined, true, ''),
                         item('اختياراتك', Icons.favorite_border_outlined, true, ''),
@@ -233,7 +233,7 @@ class _profileState extends State<profile> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("مركز المساعدة", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold),),
+                        Text("مركز المساعدة", style: TextStyle(fontFamily: 'readex', fontWeight: FontWeight.bold, fontSize: 12),),
                         item('اطلب المساعدة', Icons.support_agent_outlined, true, ''),
                         item('بطاقات المساعدة', Icons.chat_bubble_outline, true, ''),
                         item('قانوني', Icons.low_priority_rounded, true, ''),
@@ -256,9 +256,9 @@ class _profileState extends State<profile> {
                     child: Container(
                       child: Row(
                         children: [
-                          Icon(Icons.login, size: 30, color: Colors.redAccent,),
+                          Icon(Icons.login, size: 25, color: Colors.redAccent,),
                           SizedBox(width: 10,),
-                          Text('تسجيل الخروج', style: TextStyle(fontFamily: 'readex', color: Colors.redAccent,),),
+                          Text('تسجيل الخروج', style: TextStyle(fontFamily: 'readex', color: Colors.redAccent, fontSize: 12),),
                         ],
                       ),
                     ),
@@ -288,13 +288,13 @@ class _profileState extends State<profile> {
           children: [
             Row(
               children: [
-                Icon(itemIcon, size: 30, color: Colors.black54,),
+                Icon(itemIcon, size: 25, color: Colors.black54,),
                 Padding(padding: EdgeInsets.only(right: 10),
-                  child: Text(itemName, style: TextStyle(fontFamily: 'readex'),),
+                  child: Text(itemName, style: TextStyle(fontFamily: 'readex', fontSize: 12),),
                 )
               ],
             ),
-            Text(info, style: TextStyle(fontFamily: 'readex', color: Color(mainColor)),)
+            Text(info, style: TextStyle(fontFamily: 'readex', color: Color(mainColor), fontSize: 12),)
           ],
         ),
       ),
