@@ -12,12 +12,46 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
 
+  String logo = "https://images.squarespace-cdn.com/content/v1/570b5c4162cd9478edc625af/1587042359495-DT89KU48IBU7YDMOQ89Z/LOGO+GREEN-01.png";
+  var mainColor = 0XFF12b699;
   final List<String> listImages = [
     "https://www.eatthis.com/wp-content/uploads/sites/4/2019/06/deep-dish-pizza-chicago.jpg",
     "https://www.efsa.europa.eu/sites/default/files/styles/share_opengraph/public/2021-03/experts_food_additives.jpg?h=827069f2&itok=Al_Mu6TK",
     "https://www.washingtonian.com/wp-content/uploads/2021/07/2Fiftys-1500x1000.jpg",
     "https://img2.storyblok.com/filters:format(webp)/f/62776/512x256/dd8a3a1d71/chicken-wide.jpg"
   ];
+
+  List <Restorant> dataList = [
+    Restorant(
+        imageUrl: 'https://media.istockphoto.com/photos/hamburger-with-cheese-and-french-fries-picture-id1188412964?k=20&m=1188412964&s=612x612&w=0&h=Ow-uMeygg90_1sxoCz-vh60SQDssmjP06uGXcZ2MzPY=',
+        name: "ويست برغر",
+        type: "برجر",
+        des: "des",
+        rating: 4.8,
+        discount: 10,
+        deliverTime: "64-34",
+        food: "food",
+        location: "",
+        state: "state",
+        deleverPrice: 5000,
+        price: 7000
+    ),
+    Restorant(
+        imageUrl: "https://vid.alarabiya.net/images/2021/12/01/53837b46-17fb-4ded-aaa4-3c1b18a6d2fe/53837b46-17fb-4ded-aaa4-3c1b18a6d2fe_16x9_1200x676.jpg?width=372&format=jpg",
+        name: "Fire Fire",
+        type: "برجر",
+        des: "des",
+        rating: 4.8,
+        discount: 10,
+        deliverTime: "64-34",
+        food: "food",
+        location: "",
+        state: "state",
+        deleverPrice: 5000,
+        price: 7000
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +59,7 @@ class _homeState extends State<home> {
         backgroundColor: Colors.white,
         elevation: 0.3,
         leading: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Padding(padding: EdgeInsets.symmetric(horizontal: 10),
               child: Icon(Icons.candlestick_chart_outlined, color: Colors.black54, size: 30,),
@@ -37,14 +72,15 @@ class _homeState extends State<home> {
           Padding(padding: EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("توصيل الى", style: TextStyle(color: Colors.black87, fontFamily: 'readex')),
+                Text("توصيل الى", style: TextStyle(color: Colors.black87, fontFamily: 'readex', fontSize: 12)),
                 Row(
                   children: const [
                     Padding(padding: EdgeInsets.symmetric(horizontal: 5),
                       child: Icon(Icons.keyboard_arrow_down_outlined, color: Colors.black54),
                     ),
-                    Text("المنزل", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontFamily: 'readex'),)
+                    Text("بغداد، العراق", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontFamily: 'readex', fontSize: 12),)
                   ],
                 )
               ],
@@ -65,12 +101,12 @@ class _homeState extends State<home> {
                     Column(
                       children: [
                         SizedBox(height: 10,),
-                        Text("نقطة", style: TextStyle(fontWeight: FontWeight.w900, fontFamily: 'readex'),),
-                        Icon(Icons.arrow_back_rounded)
+                        Text("نقطة", style: TextStyle( fontFamily: 'readex', fontSize: 10),),
+                        Icon(Icons.arrow_back_rounded, size: 20,)
                       ],
                     ),
                      SizedBox(width: 12,),
-                     Text("3.8k", style: TextStyle(fontSize: 35, fontWeight: FontWeight.w900, fontFamily: 'readex'),)
+                     Text("0", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontFamily: 'readex'),)
                    ],
                  ),
                  Column(
@@ -78,9 +114,9 @@ class _homeState extends State<home> {
                    children: [
                      Row(
                        children: [
-                         Icon(Icons.info_outline, size: 30, color: Colors.teal,),
+                         Icon(Icons.info_outline, size: 20, color: Color(mainColor),),
                          SizedBox(width: 5,),
-                         Text("الفئة الخضراء", style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.teal, fontFamily: 'readex'))
+                         Text("الفئة الخضراء", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(mainColor), fontFamily: 'readex'))
                        ],
                      ),
                      Padding(padding: EdgeInsets.symmetric(vertical: 5),
@@ -171,7 +207,7 @@ class _homeState extends State<home> {
                             width: 20,
                             height: 3.5,
                             decoration: BoxDecoration(
-                                color: Colors.teal,
+                                color: Color(mainColor),
                                 borderRadius: BorderRadius.circular(5)
                             ),
                           ),
@@ -180,8 +216,8 @@ class _homeState extends State<home> {
                       ),
                      ),
                      Container(
-                       width: 250,
-                       child: Text("تبقى 9 خطوات اضافية لغاية اغسطس 31 للترقية الي الفئة الذهبية", textAlign: TextAlign.right, style: TextStyle(color: Colors.grey, fontFamily: 'readex'),),
+                       width: MediaQuery.of(context).size.width-100,
+                       child: Text("تبقى 10 طلبات اضافية لغاية سبتمبر 30 للترقية الي الفئة الذهبية", textAlign: TextAlign.right, style: TextStyle(color: Colors.grey, fontFamily: 'readex', fontSize: 10),),
                      )
                    ],
                  )
@@ -204,8 +240,8 @@ class _homeState extends State<home> {
                 indicatorLayout: PageIndicatorLayout.COLOR,
                 autoplay: true,
                 itemCount: listImages.length,
-                pagination: const SwiperPagination(),
-                viewportFraction: 0.9,
+
+                viewportFraction: 0.92,
                 scale: 0.9,
                 loop: true,
               ),
@@ -260,13 +296,13 @@ class _homeState extends State<home> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Icon(Icons.arrow_back_ios, color: Colors.teal,),
-                      Text("خصومات اسبوعية", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20, fontFamily: 'readex'),)
+                    children: [
+                      Icon(Icons.arrow_back_ios, color: Color(mainColor), size: 15,),
+                      Text("خصومات الاسبوعية", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, fontFamily: 'readex'),)
                     ],
                   ),
                   Padding(padding: EdgeInsets.symmetric(vertical: 5),
-                    child: Text("احصل على خصم 50% على مطاعم هذا الاسبوع", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade500, fontFamily: 'readex')),
+                    child: Text("احصل على خصم 50% على مطاعم هذا الاسبوع", style: TextStyle(color: Colors.grey.shade500, fontFamily: 'readex', fontSize: 12)),
                   )
                 ],
               ),
@@ -301,121 +337,28 @@ class _homeState extends State<home> {
           ],
         ),
       ),
-      bottomNavigationBar: ButtonBar(
-        buttonPadding:  EdgeInsets.symmetric(horizontal: 5),
-        alignment: MainAxisAlignment.center,
-        children: [
-          GestureDetector(onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => home()
-            ));
-          },
-              child:
-              Container(
-                width: 75,
-                height: 70,
-                child: Column(
-                  children: [
-                    Icon(Icons.person_outline, size: 30, color: Colors.grey.shade500),
-                    Text("الحساب", style: TextStyle(color: Colors.grey.shade500, fontFamily: 'readex', fontSize: 10),)
-                  ],
-                ),
-              )
-          ),
-          GestureDetector(onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => home()
-            ));
-          },
-              child:
-              Container(
-                width: 75,
-                height: 70,
-                child: Column(
-                  children: [
-                    Icon(Icons.list_alt_rounded, size: 30, color: Colors.grey.shade500),
-                    Text("الطلبات", style: TextStyle(color: Colors.grey.shade500, fontFamily: 'readex', fontSize: 10),)
-                  ],
-                ),
-              )
-          ),
-          GestureDetector(onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => home()
-            ));
-          },
-              child:
-              Container(
-                width: 75,
-                height: 70,
-                child: Column(
-                  children: [
-                    Icon(Icons.moped_outlined, size: 30, color: Colors.grey.shade500),
-                    Text("المندوب", style: TextStyle(color: Colors.grey.shade500, fontFamily: 'readex', fontSize: 10),)
-                  ],
-                ),
-              )
-          ),
-          GestureDetector(onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => home()
-            ));
-          },
-              child:
-              Container(
-                width: 75,
-                height: 70,
-                child: Column(
-                  children: [
-                    Icon(Icons.search, size: 30, color: Colors.grey.shade500),
-                    Text("البحث", style: TextStyle(color: Colors.grey.shade500, fontFamily: 'readex', fontSize: 10),)
-                  ],
-                ),
-              )
-          ),
-          GestureDetector(onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => home()
-            ));
-          },
-              child:
-              Container(
-                width: 75,
-                height: 70,
-                child: Column(
-                  children: [
-                    Icon(Icons.home_sharp, size: 30, color: Colors.teal),
-                    Text("الرئيسية", style: TextStyle(color: Colors.teal, fontFamily: 'readex', fontSize: 10),)
-                  ],
-                ),
-              )
-          ),
-
-        ],
-      ),
     );
   }
 
   Container component(String title, String imageUrl){
     return  Container(
       width: 122,
-      height: 110,
+      height: 90,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [BoxShadow(
             spreadRadius: 1,
-            blurRadius: 25,
-            offset: Offset(4, 4),
-            color: Colors.grey.withOpacity(0.2)
+            blurRadius: 5,
+            color: Colors.grey.withOpacity(0.1)
         )],
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 10,),
           Image.network(imageUrl, width: 60,height: 60,),
           Padding(padding: EdgeInsets.only(top: 5),
-            child: Text(title, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: 'readex'),),
+            child: Text(title, style: TextStyle(fontSize: 10, fontFamily: 'readex'),),
           )
         ],
       ),
@@ -449,7 +392,7 @@ class _homeState extends State<home> {
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: 200,
+                  height: 160,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [BoxShadow(
@@ -461,9 +404,9 @@ class _homeState extends State<home> {
                   ),
                 ),
                 Positioned(top: 15, left: 10, child: Icon(Icons.favorite_border_outlined, color: Colors.white, size: 30,)),
-                Positioned(bottom: -10, left: 10,child: Container(
-                  width: 80,
-                  height: 50,
+                Positioned(bottom: -5, left: 15,child: Container(
+                  width: 65,
+                  height: 40,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
@@ -476,18 +419,18 @@ class _homeState extends State<home> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text("طلب مسبق", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', fontSize: 10, color: Colors.grey),),
-                      Text("٠٨:٢٤ص", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex',))
+                      Text("١٧ - ٢٧", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex',)),
+                      Text("دقائق", style: TextStyle( fontFamily: 'readex', fontSize: 9, color: Colors.grey),),
                     ],
                   ),
                 )),
               ],
             ),
             Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              child: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black87, fontFamily: 'readex'),),
+              child: Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.black87, fontFamily: 'readex'),),
             ),
             Padding(padding: EdgeInsets.only(bottom: 10, right: 10),
-              child: Text("فطور . \$\$", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87, fontFamily: 'readex'),),
+              child: Text("فطور . \$\$", style: TextStyle(fontSize: 10, color: Colors.black87, fontFamily: 'readex'),),
             ),
             Padding(padding: EdgeInsets.symmetric(horizontal: 10),
               child: Row(
@@ -501,9 +444,23 @@ class _homeState extends State<home> {
                     ),
                     child: Row(
                       children: [
-                        Text("اكسب نقاط", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontFamily: 'readex'),),
+                        Text("اكسب نقاط", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontFamily: 'readex', fontSize: 10),),
                         SizedBox(width: 5,),
-                        Icon(Icons.add_circle_outline, color: Colors.blue,)
+                        Icon(Icons.add_circle_outline, color: Colors.blue, size: 15,)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+                    decoration: BoxDecoration(
+                        color: Colors.orangeAccent.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(5)
+                    ),
+                    child: Row(
+                      children: [
+                        Text("30% خصم", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepOrange, fontFamily: 'readex', fontSize: 10),),
+                        SizedBox(width: 5,),
+                        Icon(Icons.local_offer_outlined, color: Colors.deepOrange, size: 15,)
                       ],
                     ),
                   ),
@@ -516,9 +473,9 @@ class _homeState extends State<home> {
                     ),
                     child: Row(
                       children: [
-                        Text("4.9", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex'),),
+                        Text("4.9", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'readex', fontSize: 10),),
                         SizedBox(width: 5,),
-                        Icon(Icons.star, color: Colors.teal,)
+                        Icon(Icons.star, color: Color(mainColor),)
                       ],
                     ),
                   )
@@ -530,5 +487,36 @@ class _homeState extends State<home> {
       ),
     );
   }
+}
+
+class Restorant{
+  String imageUrl;
+  String name;
+  String type;
+  String des;
+  double rating;
+  int discount;
+  String deliverTime;
+  String food;
+  String location;
+  String state;
+  int deleverPrice;
+  int price;
+
+  Restorant({
+  required this.imageUrl,
+  required this.name,
+  required this.type,
+  required this.des,
+  required this.rating,
+  required this.discount,
+  required this.deliverTime,
+  required this.food,
+  required this.location,
+  required this.state,
+  required this.deleverPrice,
+  required this.price
+});
+
 }
 
